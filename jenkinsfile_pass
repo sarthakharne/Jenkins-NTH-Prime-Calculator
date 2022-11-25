@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Clone Git') {
             steps {
-                git 'https://github.com/MnCSSJ4x/Jenkins-Calculator.git'
+                git 'https://github.com/sarthakharne/Jenkins-NTH-Prime-Calculator.git'
             }
         }
         stage('Build Code') {
             steps {
-                sh "chmod u+x Calculator.py"
-                sh "python3 Calculator.py"
+                sh "chmod u+x nthprime.py"
+                sh "python3 nthprime.py"
             }
         }
         stage('Test Set 1 (supposed to pass) ') {
